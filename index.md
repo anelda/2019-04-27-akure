@@ -12,7 +12,7 @@ humantime: "10:00am - 2:00pm"    # human-readable times for the workshop (e.g., 
 startdate: 2019-04-27      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2019-04-27        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Dennis Irorere"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Simioluwa Kafaru"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Simioluwa Kafaru", "Ogungbe Micheal Ayomide"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["denironyx@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -40,21 +40,6 @@ the pitch.
 {% include lc/intro.html %}
 {% endif %}
 
-{% comment %}
-AUDIENCE
-
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if page.carpentry == "swc" %}
-{% include sc/who.html %}
-{% elsif page.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif page.carpentry == "lc" %}
-{% include lc/who.html %}
-{% endif %}
-
-
 
 {% comment %}
 SPECIAL REQUIREMENTS
@@ -62,7 +47,7 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="who">
-  <strong>Who:</strong> The course is aimed at under-graduate students and other researchers. <strong>You don't need to have any previous knowledge of the tools that will be presented at the workshop.</strong>
+  <strong>Who:</strong> The course is aimed at under-graduate, graduate students and other researchers. <strong>You don't need to have any previous knowledge of the tools that will be presented at the workshop.</strong>
 </p>
 
 
@@ -139,7 +124,6 @@ Display the contact email address set in the configuration file.
 {% endcomment %}
 <p id="contact">
   <strong>Contact</strong>:
-  denironyx@gmail.com
   {% if page.email %}
   {% for email in page.email %}
   {% if forloop.last and page.email.size > 1 %}
@@ -653,15 +637,19 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'R' section. {% endcomment %}
 
+<!--
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
 
+<!--
   <p>
     SQL is a specialized programming language used with databases.  We
     use a simple database manager called
     <a href="https://www.sqlite.org/">SQLite</a> in our lessons.
   </p>
+-->
 
+<!--
   <div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#sql-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
@@ -688,6 +676,7 @@ please preview your site before committing, and make sure to run
           Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
         </p>
       </article>
+-->
       
     </div>
     {%else%}
@@ -727,14 +716,16 @@ please preview your site before committing, and make sure to run
       </article>
     </div>
       {%endif%}
-  </div>
+<!--  </div>-->
 
+<!--
   <p><strong>If you installed Anaconda, it also has a copy of SQLite
       <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
       Instructors will provide a workaround for it if needed.</strong></p>
 </div> {% comment %} End of 'SQLite' section. {% endcomment %}
 
-<div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
+<!--<div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}-->
+<!--
   <h3>OpenRefine</h3>
   <p>
     For this lesson you will need <em>OpenRefine</em> and a
@@ -742,12 +733,15 @@ please preview your site before committing, and make sure to run
     It runs inside a web browser, but no web connection is needed.
   </p>
 
+<!--
   <div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#openrefine-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#openrefine-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
       <li role="presentation"><a data-os="linux" href="#openrefine-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
     </ul>
+-->
+
 
     <div class="tab-content">
       <article role="tabpanel" class="tab-pane active" id="openrefine-windows">
@@ -783,13 +777,17 @@ please preview your site before committing, and make sure to run
         <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
       </article>
     </div>
+<!--
   </div>
 </div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
+-->
 
 {% comment %}
+<!--
 <div id="vm">
   <h3>Virtual Machine</h3>
 
+<!--
   <p>
     Some instructors prefer to have learners use a virtual machine (VM)
     rather than install software on their own computers.  If your
@@ -800,6 +798,8 @@ please preview your site before committing, and make sure to run
       Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
     </li>
     <li>
+-->
+<!--
       Download our <a href="{{site.swc_vm}}">VM image</a>.
       <strong>Warning:</strong> this file is 1.7 GByte, so please
       download it <em>before</em> coming to your workshop.
@@ -810,4 +810,5 @@ please preview your site before committing, and make sure to run
     </li>
   </ol>
 </div>
+-->
 {% endcomment %}
