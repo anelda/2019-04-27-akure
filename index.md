@@ -19,6 +19,32 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 ---
 
 
+
+{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
+
+{% comment %}
+HEADER
+
+Edit the values in the block above to be appropriate for your workshop.
+If the value is not 'true', 'false', 'null', or a number, please use
+double quotation marks around the value, unless specified otherwise.
+And run 'make workshop-check' *before* committing to make sure that changes are good.
+{% endcomment %}
+
+
+
+{% comment %}
+For a workshop please delete the following block
+{% endcomment %}
+
+{% if page.carpentry != site.carpentry %}
+<div class="alert alert-warning">
+You specified <code>carpentry: {{page.carpentry}}</code> in <code>index.md</code> and
+<code>carpentry: {{site.carpentry}}</code> in <code>_config.yml</code>. Make sure you edit both files. After editing <code>_config.yml</code>, you need to run <code>make serve</code> again to 
+see the changes take effect locally.
+</div>
+{% endif %}
+
 {% comment %}
 EVENTBRITE
 
@@ -36,52 +62,6 @@ displayed if the 'eventbrite' field in the header is not set.
   scrolling="auto">
 </iframe>
 {% endif %}
-
-
-<h2 id="general">General Information</h2>
-
-{% comment %}
-INTRODUCTION
-
-Edit the general explanatory paragraph below if you want to change
-the pitch.
-{% endcomment %}
-{% if page.carpentry == "swc" %}
-{% include sc/intro.html %}
-{% elsif page.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif page.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% endif %}
-
-{% comment %}
-AUDIENCE
-
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if page.carpentry == "swc" %}
-{% include sc/who.html %}
-{% elsif page.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif page.carpentry == "lc" %}
-{% include lc/who.html %}
-{% endif %}
-
-{% comment %}
-LOCATION
-
-This block displays the address and links to maps showing directions
-if the latitude and longitude of the workshop have been set.  You
-can use https://itouchmap.com/latlong.html to find the lat/long of an
-address.
-
-
-Who is the workshop for?
-{% endcomment %}
-<p id="who">
-  <strong>Who:</strong> The course is aimed at under-graduate students and other researchers. <strong>You don't need to have any previous knowledge of the tools that will be presented at the workshop.</strong>(listed <a href="#setup">below</a>).
-</p>
 
 
 {% endcomment %}
