@@ -216,6 +216,7 @@ please preview your site before committing, and make sure to run
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
 
+<p>Participants are advice to learn Data Organization in Spreadsheets and Data cleaning with Open refine in their spare time, as we will be spending more time in introducing R</p>
 {% if page.carpentry == "swc" %}
 {% include sc/syllabus.html %}
 {% elsif page.carpentry == "dc" %}
