@@ -8,7 +8,7 @@ country: "Nigeria"      # lowercase two-letter ISO country code such as "fr" (se
 language: "English"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latlng: "7.3043° N, 5.1370° E"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
 humandate: "27th April, 2019"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "10:00am - 2:00pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+humantime: "10:00am - 4:00pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2019-04-27      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2019-04-27        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Dennis Irorere"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -216,7 +216,7 @@ please preview your site before committing, and make sure to run
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
 
-<p>Participants are advice to learn Data Organization in Spreadsheets and Data cleaning with Open refine in their spare time, as we will be spending more time in introducing R</p>
+<p>The Data Organization in Spreadsheets and Data Cleaning with Open Refine are optional materials to work through before the workshop.</p>
 {% if page.carpentry == "swc" %}
 {% include sc/syllabus.html %}
 {% elsif page.carpentry == "dc" %}
